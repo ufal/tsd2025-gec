@@ -1,0 +1,32 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: train-transformer
+  labels:
+    app: train-transformer
+    team: research
+  namespace: research
+spec:
+  strategy:
+    type: Recreate
+  replicas: 1
+  selector:
+    matchLabels:
+      app: train-transformer
+  template:
+    metadata:
+      labels:
+        app: train-transformer
+        team: research
+    spec:
+      restartPolicy: Always
+      containers:
+      - name: worker
+        # Fill:
+        image: <docker-image-name>
+        command: ["/bin/bash", "-c", "source ~/miniconda3/etc/profile.d/conda.sh && conda activate && cd /code/src/<selected-model-config-folder> && python ../pipeline/run.py --config config.json"]
+        resources:
+          limits:
+            nvidia.com/gpu: 1
+          requests:
+            nvidia.com/gpu: 1

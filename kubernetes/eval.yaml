@@ -1,0 +1,38 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: eval-transformer
+  labels:
+    app: eval-transformer
+    team: research
+  namespace: research
+spec:
+  strategy:
+    type: Recreate
+  replicas: 1
+  selector:
+    matchLabels:
+      app: eval-transformer
+  template:
+    metadata:
+      labels:
+        app: eval-transformer
+        team: research
+    spec:
+      restartPolicy: Always
+      imagePullSecrets:
+      - name: mlops-secrets
+      containers:
+      - name: worker
+        # Fill:
+        image: <docker-image-name>
+        command: ["/bin/bash", "-c", "source ~/miniconda3/etc/profile.d/conda.sh && conda activate && cd /code/src/<selected-model-config-folder> && python ../pipeline/run.py --config config.json --eval"]
+        resources:
+          limits:
+            cpu: "4"
+            memory: 32Gi
+            nvidia.com/gpu: 1
+          requests:
+            cpu: "4"
+            memory: 32Gi
+            nvidia.com/gpu: 1

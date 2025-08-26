@@ -1,0 +1,3 @@
+[submodule "gec_tool_comparison"]
+	path = gec_tool_comparison
+	url = https://github.com/strakova/gec_tool_comparison/

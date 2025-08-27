@@ -9,7 +9,7 @@ This repository contains the source code accompanying the following paper:
 <h3 align="center"><a href="https://arxiv.org/pdf/2506.22402">Refining Czech GEC: Insights from a Multi-Experiment Approach</a></h3>
 
 <p align="center">
-  <b>Petr Pechman, Milan Straka, Jana Straková, Jakub Náplava</b><br>
+  <b>Petr Pechman, Milan Straka, Jana Straková, Jakub Náplava</b><br>
   Seznam.cz, Prague, Czech Republic<br>
   Charles University, Prague, Czech Republic
 </p>

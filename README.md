@@ -32,11 +32,14 @@ links are available on https://github.com/ufal/tsd2025-gec. <br clear="both">
 
 We release finetuned models, available on HuggingFace:
 
-- [**byt5-large-geccc-mate**](https://huggingface.co/ufal/byt5-large-geccc-mate)
-- [**byt5-large-akces-mate**](https://huggingface.co/ufal/byt5-large-akces-mate)
-- [**byt5-base-geccc-mate**](https://huggingface.co/ufal/byt5-base-geccc-mate)
-- [**byt5-small-geccc-mate**](https://huggingface.co/ufal/byt5-small-geccc-mate)
-- [**transformer-base-geccc-mate**](https://huggingface.co/ufal/transformer-base-geccc-mate)
+- finetuned on the [GECCC dataset](https://hdl.handle.net/11234/1-4861):
+  - [**byt5-small-geccc-mate**](https://hf.co/ufal/byt5-small-geccc-mate)
+  - [**byt5-base-geccc-mate**](https://hf.co/ufal/byt5-base-geccc-mate)
+  - [**byt5-large-geccc-mate**](https://hf.co/ufal/byt5-large-geccc-mate)
+  - [**transformer-base-geccc-mate**](https://hf.co/ufal/transformer-base-geccc-mate)
+
+- finetuned on the [AKCES-GEC dataset](https://hdl.handle.net/11234/1-3057):
+  - [**byt5-large-akces-mate**](https://hf.co/ufal/byt5-large-akces-mate)
 
 ---
 
